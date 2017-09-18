@@ -1,0 +1,58 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MDM Admin</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li data-nav="alert">
+          <a href="/admin/alerts"><i class="fa fa-bell"></i> 通知公告</a>
+        </li>
+        <li data-nav="user">
+          <a href="/admin/users"><i class="fa fa-users"></i> 用户</a>
+        </li>
+        <li data-nav="ticket">
+          <a href="/admin/tickets"><i class="fa fa-tasks"></i> 事务</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-cogs"></i>
+            其他设置 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li data-nav="campus">
+              <a href="/admin/campuses"><i class="fa fa-map-marker"></i> 校区管理</a>
+            </li>
+            <li data-nav="role">
+              <a href="/admin/roles"><i class="fa fa-tags"></i> 角色管理</a>
+            </li>
+            <li data-nav="workflow">
+              <a href="/admin/workflows"><i class="fa fa-cogs"></i> 审批流程管理</a>
+            </li>
+            <li data-nav="room">
+              <a href="/admin/rooms"><i class="fa fa-microphone"></i> 会议室管理</a>
+            </li>
+            <li data-nav="office">
+              <a href="/admin/rooms?type=office"><i class="fa fa-coffee"></i> 领导管理</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if @currentUser: %>
+        <li><a href="#">
+          <i class="fa fa-user-circle"></i> <%= @currentUser.realname %></a></li>
+        <li><a href="/passport/logout">退出</a></li>
+        <% else: %>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

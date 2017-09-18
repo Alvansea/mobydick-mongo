@@ -1,0 +1,21 @@
+<% if @paginator && @paginator.pages && @paginator.pages.length > 1: %>
+<ul class="pagination">
+  <li>
+    <a href="<%= @paginator.start%>"><i class="fa fa-angle-double-left"></i></a >
+  </li>
+  <li class="page-prev">
+    <a href="<%= @paginator.prev %>"><i class="fa fa-angle-left"></i></a >
+  </li>
+  <% for page in @paginator.pages: %>
+  <li class="<%= page.className %> hidden-xs">
+    <a href="<%= page.href %>"><%= page.pageNo %></a >
+  </li>
+  <% end %>
+  <li class="page-next">
+    <a href="<%= @paginator.next %>"><i class="fa fa-angle-right"></i></a >
+  </li>
+  <li>
+    <a href="<%= @paginator.end %>"><i class="fa fa-angle-double-right"></i></a >
+  </li>
+</ul>
+<% end %>

@@ -1,0 +1,41 @@
+<ul class="nav nav-sidebar">
+  <li data-nav="alert">
+    <a href="/admin/alerts"><i class="fa fa-bell"></i> 通知公告</a>
+  </li>
+  <li data-nav="user">
+    <a href="/admin/users"><i class="fa fa-users"></i> 用户管理</a>
+  </li>
+  <li data-nav="ticket">
+    <a href="/admin/tickets"><i class="fa fa-tasks"></i> 事务管理</a>
+  </li>
+</ul>
+<ul class="nav nav-sidebar">
+  <li data-nav="campus">
+    <a href="/admin/campuses"><i class="fa fa-map-marker"></i> 校区管理</a>
+  </li>
+  <li data-nav="role">
+    <a href="/admin/roles"><i class="fa fa-tags"></i> 角色管理</a>
+  </li>
+  <li data-nav="workflow">
+    <a href="/admin/workflows"><i class="fa fa-cogs"></i> 审批流程管理</a>
+  </li>
+  <li data-nav="room">
+    <a href="/admin/rooms"><i class="fa fa-microphone"></i> 会议室管理</a>
+  </li>
+  <li data-nav="office">
+    <a href="/admin/rooms?type=office"><i class="fa fa-coffee"></i> 领导管理</a>
+  </li>
+  <li data-nav="campusEvent" class="hidden">
+    <a href="/admin/campus_events"><i class="fa fa-microphone"></i> 大型会务管理</a>
+  </li>
+</ul>
+<ul class="nav nav-sidebar">
+  <li data-nav="exit">
+    <a href="/passport/logout"><i class="fa fa-power-off"></i> 退出</a>
+  </li>
+</ul>
+<% if @sideNav: %>
+<script type="text/javascript">
+  $('li[data-nav="<%= @sideNav %>"]').addClass('active');
+</script>
+<% end %>

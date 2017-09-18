@@ -1,0 +1,24 @@
+{
+  "name": "mobydick-mongo",
+  "description": "mobydick skeleton with mongodb support",
+  "main": "main/app.js",
+  "authors": [
+    "Alvan(alvansea@qq.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Alvansea/mobydick-mongo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^2.4.4",
+    "font-awesome": "^4.7.0",
+    "moment": "^2.18.1",
+    "vue-resource": "^1.3.4"
+  }
+}

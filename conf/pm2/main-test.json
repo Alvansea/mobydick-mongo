@@ -1,0 +1,20 @@
+{
+  "apps": [{
+    "name":             "mdm:test",
+    "script":           "./app/main.js",
+    "watch": [
+      "./app",
+      "./conf",
+      "./lib",
+      "./models",
+      "./routes",
+    ],
+    "log_date_format":  "YYYY-MM-DD HH:mm:ss",
+    "out_file":         "./logs/std-out.log",
+    "error_file":       "./logs/std-err.log",
+    "exec_interpreter": "node",
+    "env": {
+      "NODE_ENV":       "test",
+    }
+  }]
+}

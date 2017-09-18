@@ -1,0 +1,38 @@
+{
+  "name": "mobydick-mongo",
+  "version": "1.0.0",
+  "description": "mobydick skeleton with mongodb support",
+  "main": "main/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main:dev": "pm2 start ./conf/pm2/main-dev.json",
+    "main:prod": "pm2 start ./conf/pm2/main-prod.json",
+    "main:test": "pm2 start ./conf/pm2/main-test.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alvansea/mobydick-mongo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alvansea/mobydick-mongo/issues"
+  },
+  "homepage": "https://github.com/Alvansea/mobydick-mongo#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^3.3.0",
+    "ect": "^0.5.9",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "helmet": "^3.8.1",
+    "mobydick-core": "github:alvansea/mobydick-core",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.11",
+    "morgan": "^1.8.2",
+    "serve-favicon": "^2.4.4",
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.7.0"
+  }
+}

@@ -1,0 +1,19 @@
+<% extend 'web/shared/template.html' %>
+
+<% block 'content': %>
+<div id="vueApp">
+	<h1>Hello {{ username }}!</h1>
+</div>
+
+<% end %>
+
+<% block 'inline-script': %>
+<script type="text/javascript">
+var vue = new Vue({
+	el: '#vueApp',
+	data: {
+		username: ViewModels.username || ''
+	}
+})
+</script>
+<% end %>
